@@ -1,0 +1,64 @@
+<div ng-controller="viewAccDetailsController">
+  <div class="container-fluid">
+      <div class="row" style="margin-top:35px;">
+      <div class="form-group">
+                <label for="account" class="form-label col-md-3">Name of the account holder:</label>
+                <div class="col-md-9">
+                <select class="form-control" id="sel_accont" ng-model="selectedItem" ng-change="viewAccDetails()">
+                 <option>Select a Account Holder</option>
+                <option ng-model='accHolder' ng-repeat="accountHolder in accountHolders track by $index" value='{{accountHolder}}'>{{accountHolder}}</option>
+                </select>
+                </div>
+            </div>
+           </div>
+ 
+           <div class="row" style="margin-top:10px;">
+       
+           <table class="table table-striped table-hover">
+                    <thead>
+                      <tr>
+                        <th style="vertical-align:middle">Longbox Acc. No.:
+                        </th>
+                        <td style="vertical-align: middle"><a href="" ng-click="viewLongboxAccDetails(longBoxDetails.accountNumber)">{{longBoxDetails.accountNumber}}</a></td>
+                      </tr>
+                       <tr>
+                        <th style="vertical-align:middle">Longbox Acc. Balance
+                        </th>
+                        <td style="vertical-align: middle">{{longBoxDetails.totalValue}}</td>
+                      </tr>
+                      <tr>
+                        <th style="vertical-align:middle">Currency
+                        </th>
+                        <td style="vertical-align: middle">{{longBoxDetails.currency}}</td>
+                        </tr>
+                      </thead>
+                  </table>
+                  </div>
+              
+         
+        
+           <div class="row" style="margin-top:10px;">
+       
+                <table class="table table-bordered"  style="margin-top:20px;">
+                <thead>
+                  <tr>
+                    <th>Segregated Acc No.</th>
+                    <th>Segregated Acc Balance</th>
+                    <th>Currency</th>
+                    <th>Pledger</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                      <tr ng-repeat="segregatedAccount in segregatedDetails">
+                        <td><a href="" ng-click="viewSegAccDetails(segregatedAccount.accountNumber)">{{segregatedAccount.accountNumber}}</a></td>
+                        <td>{{segregatedAccount.totalValue}}</td>
+                        <td>{{segregatedAccount.currency}}</td>
+                        <td>{{segregatedAccount.accountName}}</td>
+                        
+                      </tr>
+                    </tbody>
+            </table>
+    </div>
+
+  </div>
+</div>

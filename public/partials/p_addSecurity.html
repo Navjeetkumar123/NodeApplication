@@ -1,0 +1,28 @@
+<div ng-controller="myLongboxAccController">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-8">
+                <div class="alert alert-info" style="margin-top:25px;">
+                    
+                            <b><p>Select the file containing the security that need added.</p></b>
+                            <form class="form">
+                                <div class="form-group">
+                                    <input type="file" file-model="myFile" accept="application/csv" style="color:transparent;"> (select only one .csv file)
+                                </div>
+                                <div class="form-group">
+                                    <label for="upload" class="control-label">Selected file:</label></br>
+                                <label for="document_name" class="control-label">{{myFile.name}}</label> 
+                                </div>
+                                <div class="form-group">
+                                    <label for="upload" class="control-label"></label>
+                                    <button type="button" class="btn btn-primary btn-sm" ng-click="submitFile()">Upload</button>
+                                </div>
+                            </form>
+                    
+                </div>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+    </div>
+</div>

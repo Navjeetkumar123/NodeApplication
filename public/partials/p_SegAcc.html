@@ -1,0 +1,25 @@
+<div ng-controller="mySegAccController">
+    <div class="container-fluid">
+        <div class="row" style="padding-top:38px;">
+            <table class="table table-bordered" >
+                <thead>
+                    <tr>
+                        <th>Segregated Acc No.</th>
+                        <th>Segregated Acc Balance</th>
+                        <th>Currency</th>
+                        <th>Pledger</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="segregatedAccount in segAccRecord track by $index">
+                        <td><a href="" ng-click="viewSegAccDetails(segregatedAccount.accountNumber)">{{segregatedAccount.accountNumber}}</a>
+                        </td>
+                        <td>{{segregatedAccount.totalValue}}</td>
+                        <td>{{segregatedAccount.currency}}</td>
+                        <td>{{segregatedAccount.pledger}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+  <div ng-controller="homeController">
+   <div class="row" style="margin-top:30px;">
+        	
+            <div class="col-sm-5">
+            <h3>Welcome {{username}}!</h3>
+            <table class="table table-striped table-hover">
+                    <thead>
+                     
+                      <tr>
+                        <th style="vertical-align:middle">Longbox Account balance:
+                        </th>
+                        <td style="vertical-align: middle">{{LongBoxAccountBalance}}</td>
+                      </tr>
+                    
+                      <tr>
+                        <th style="vertical-align:middle">Currency
+                        </th>
+                        <td style="vertical-align: middle">{{currency}}</td>
+                        </tr>
+                           <tr>
+                        <th style="vertical-align:middle">Tri party Agent
+                        </th>
+                        <td style="vertical-align: middle">{{bankRecord.TPA_name}}</td>
+                      </tr>
+                      </thead>
+                  </table>
+                  </div>
+                  <div class="col-sm-7">
+                   <div class="alert alert-info" style="margin-top:43px;">
+                       <h4>Pending collateral request: {{count}}</h4>
+                       <button type="button" class="btn btn-primary btn-sm" ng-click="viewPendingMarginCall()">Click here to view</button>
+                   </div>
+                  </div> 
+        </div>
+        </div>

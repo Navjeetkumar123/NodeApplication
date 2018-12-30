@@ -1,0 +1,41 @@
+<div ng-controller="transactionHistoryController">
+<div class="container-fluid">
+     
+        <div class="row" style="margin-top:30px;">
+        	<h4>Search results:</h4>
+        	<div class=table-responsive>
+        	<table class="table table-bordered">
+			    <thead>
+			      <tr>
+			        <th>Deal ID</th>
+			        <th>Pledger</th>
+			        <th>Pledgee</th>
+			        <th>RQV</th>
+			        <th>Currency</th>
+			        <th>Margin Call Date</th>
+			        <th>Deal Status</th>
+			        <th>Application Status</th>
+			       
+				      </tr>
+				    </thead>
+				    <tbody>
+				       <tr ng-repeat="x in transaction_history_TableData_2 track by $index">
+				        <td>{{x.dealId}}</td>
+				        <td>{{x.pledger}}</td>
+				        <td>{{x.pledgee}}</td>
+				        <td>{{x.rqv}}</td>
+				        <td>{{x.currency}}</td>
+				        <td>{{x.marginCallDate}}</td>
+				        <td>{{x.dealStatus}}</td>
+				        <td><a href="" ng-click="sub_transcation_history3()">{{x.applicationStatus}}</a></td>
+				        
+				      
+				      </tr>
+    				</tbody>
+  			</table>
+  			</div>
+        </div>
+             
+    </div>
+</div>
+

@@ -1,0 +1,97 @@
+<div ng-controller="myTransactionController">
+<div class="container-fluid">
+      <div class="row">
+      
+               
+                <div class="alert alert-info" style="padding-top:35px;">
+                    
+                   
+                    <b><p>Please enter one of the following details:</p></b>
+                        <div class="form">
+                            <form class="form-horizontal" name="sform">
+                                <div class="form-group" >
+                                    <label for="exampleInput4" class="col-sm-3 control-label">My role:</label>
+                                    <div class="col-sm-9" ng-init="user='Pledger'" ng-required>
+                                         <div class="radio3 radio-check radio-info radio-inline">
+                                            <input type="radio" id="radio1" name="user" ng-model="user" value="Pledger">
+                                            <label for="radio1">
+                                                Pledger
+                                            </label>
+                                        </div>
+                                        <div class="radio3 radio-check radio-info radio-inline">
+                                             <input type="radio" id="radio2" name="user"  ng-model="user" value="Pledgee">
+                                            <label for="radio2">
+                                                Pledgee
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                    <div class="form-group" >
+                                    <label for="exampleInput4" class="col-sm-3 control-label">Counterparty role:</label>
+                                    <div class="col-sm-9" ng-init="user='Pledgee'">
+                                         <div class="radio3 radio-check radio-info radio-inline" ng-required>
+
+                                            <input type="radio" id="radio3" name="c_role" ng-model="c_role" value="Pledger">
+                                            <label for="radio1">
+                                                Pledger
+                                            </label>
+                                        </div>
+                                        <div class="radio3 radio-check radio-info radio-inline">
+                                             <input type="radio" id="radio4" name="c_role1"  ng-model="c_role" value="Pledgee">
+                                            <label for="radio2">
+                                                Pledgee
+                                            </label>
+                                        </div>
+                    
+                                    </div>
+                                </div>
+                
+                      <div class="form-group" >
+                                    <label for="exampleInput4" class="col-sm-3 control-label">Deal ID:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text"  class="form-control" id="dealId"  ng-model ="dealId">
+                    
+                                    </div>
+                                </div>
+                    <div class="form-group" >
+                                    <label for="exampleInput4" class="col-sm-3 control-label">Transaction No. :</label>
+                                    <div class="col-sm-9">
+                                        <input type="text"  class="form-control" id="transactionId"  ng-model ="transactionId">
+                    
+                                    </div>
+                                </div>
+                      <div class="form-group" >
+                                    <label for="exampleInput4" class="col-sm-3 control-label">Currency:</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control" id="currencyList" ng-model="currencyList">
+                                          <option ng-repeat="currency in currencies track by $index">{{currency}}</option>
+                                        </select>
+                    
+                                    </div>
+                                </div>
+                                <div class="form-group" >
+                                    <label for="exampleInput5" class="col-sm-3 control-label">Counterparty:</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control" id="counterparty" ng-model="counterparty">
+                                          <option ng-repeat="counterparty in counterparties track by $index">{{counterparty}}</option>
+                                        </select>
+                    
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label"></label>
+                                    <div class="col-sm-9">
+                                        <button type="submit" ng-click="submitMyTransaction2()" class="btn btn-primary">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                      
+                    </div>
+                </div>
+           
+      
+         </div>
+             
+    </div>
+  </div>

@@ -1,0 +1,25 @@
+<div ng-controller="submitAllocationController">
+    <div class="container-fluid">
+        <div class="row" style="margin-top:35px;">
+            <div class="alert alert-info">
+               
+                        <b><p>Select the file containing the deals that need collateral to be allocated:</p></b>
+                        <form class="form">
+                            <div class="form-group">
+                                <input type="file" file-model="myFile" accept="application/csv" style="color:transparent;" title="Browse">(Please select only .csv files)
+                            </div>
+                            <div file-model></div>
+                            <div class="form-group">
+                                <label for="upload" class="control-label">File selected:</label></br>
+                                <label for="document_name" class="control-label">{{myFile.name}}</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="upload" class="control-label"></label>
+
+                                <button type="button" class="btn btn-primary btn-sm" ng-click="submitFile()">Upload</button>
+                            </div>
+                        </form>
+                    </div
+            </div>
+        </div>
+    </div>

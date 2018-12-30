@@ -1,0 +1,38 @@
+<div ng-controller="myTransactionController">
+<div class="container-fluid">
+           <div class="row" style="padding-top:35px;">
+         
+            <p><b>Please find the details of all margin calls that have been issued to you:</b><p>
+                <table class="table table-bordered" style="margin-top:30px;">
+                <thead>
+                  <tr>
+                    <th>Deal ID 
+                    </th>
+                    <th>Transaction No. 
+                    </th>
+                    <th>RQV</th>
+                    <th>Currency</th>
+                    <th>Margin Call Date</th>
+                    <th>Deal Status</th>
+                    <th>Allocation Status</th>
+                    <th>Pledgee</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                     <tr ng-repeat="trans in transaction track by $index">
+                        <td>{{trans.dealId}}</td>
+                        <td>{{trans.pledgee}}</td>
+                        <td>{{trans.rqv}}</td>
+                        <td>{{trans.currency}}</td>
+                        <td>{{trans.marginCAllDate}}</td>
+                        <td>{{trans.dealStatus}}</td>
+                        <td><a href="" ng-click="submitMyTransaction3()">{{trans.allocationStatus}}</a></td>
+                      </tr>
+                    </tbody>
+            </table>
+        
+            </div>
+             
+    </div>
+  </div>
+

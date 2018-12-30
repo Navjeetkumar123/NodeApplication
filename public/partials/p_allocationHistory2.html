@@ -1,0 +1,80 @@
+<div ng-controller="allocationHistoryController">
+<div class="container-fluid">
+      <div class="row" style="margin-top:15px;">
+       
+     
+        	<table class="table table-striped table-hover">
+                    <thead>
+                     
+                      <tr>
+                        <th style="vertical-align:middle">Deal ID:
+                        </th>
+                        <td style="vertical-align: middle">{{alloc_Dealhist_table.dealId}}</td>
+                      </tr>
+                       <tr>
+                        <th style="vertical-align:middle">Pledgee
+                        </th>
+                        <td style="vertical-align: middle">{{alloc_Dealhist_table.pledgee}}</td>
+                      </tr>
+                      <tr>
+                        <th style="vertical-align:middle">Pledgee seg.Account
+                        </th>
+                        <td style="vertical-align: middle">{{alloc_Dealhist_table.pledgeeSegAcc}}</td>
+                        </tr>
+                      <tr>
+                        <th style="vertical-align:middle">RQV
+                        </th>
+                       <td style="vertical-align: middle">{{alloc_Dealhist_table.rqv}}
+                          </td>
+                      </tr>
+                       <tr>
+                        <th style="vertical-align:middle">Currency 
+                        </th>
+                       <td style="vertical-align: middle">{{alloc_Dealhist_table.currency}}
+                          </td>
+                      </tr>
+                     </thead>
+                  </table>
+      
+        
+            <p><b>Allocation details are given below:</b></p>
+            <table class="table table-bordered" style="margin-top:15px;">
+                <thead>
+                  <tr>
+                    <th>Security</th>
+                    <th>Sec ID</th>
+                    <th>Type</th>
+                    <th>Quantity</th>
+                    <th>Colleteral Form</th>
+                    <th>MTM</th>
+                    
+                    <th>Valuation %</th>
+                    <th>Eff. Value</th>
+                    <th>Total Value</th>
+                    <th>Currency</th>
+                   
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr ng-repeat="x in alloc_hist_table_2 track by $index">
+                        <td>{{x.security}}</td>
+                      <td>{{x.secId}}</td>
+                        <td>{{x.type}}</td>
+                        <td>{{x.quantity}}</td>
+                        <td>{{x.collForm}}</td>
+                        <td>{{x.mtm}}</td>
+                        
+                        <td>{{x.valuation}}</td>
+                       
+                        <td>{{x.effValue}}</td>
+                        <td>{{x.totalValue}}</td>
+                        <td>{{x.currency}}</td>
+                      </tr>
+                    </tbody>
+            </table>
+        </div>  
+      
+    </div>
+  </div>
+
+

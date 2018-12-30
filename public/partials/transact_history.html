@@ -1,0 +1,48 @@
+<div ng-controller="transactionHistoryController">
+    <div class="container-fluid">
+        <div class="row" style="margin-top:37px;">
+            <div class="alert alert-info">
+               
+                        <b><p>Enter at least one of the following details:</p>
+                        </b>
+                        <form class="form">
+                            <div class="form-group">
+                                <label for="dealId" class="control-label">Deal ID:</label>
+                                <input type="text" class="form-control" id="dealId" ng-model="dealId" required="required">
+                            </div>
+                            <div class="form-group">
+                                <label for="transactionNumber" class="control-label">Transaction No.:</label>
+                                <input type="text" class="form-control" id="transactionNumber" ng-model="transactionNumber" required="required">
+                            </div>
+                            <div class="form-group">
+                                <label for="currency" class="control-label">Currency:</label>
+                                <select class="form-control" id="currency" ng-model="currency">
+                                    <option>USD</option>
+                                    <option>Dollar</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="pledger" class="control-label">Pledger:</label>
+                                <select class="form-control" id="pledger" ng-model="pledger">
+                                    <option>X</option>
+                                    <option>Y</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="pledgee" class="control-label">Pledgee:</label>
+                                <select class="form-control" id="pledgee" ng-model="pledgee">
+                                    <option>A</option>
+                                    <option>B</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="upload" class="control-label"></label>
+
+                                <button type="button" class="btn btn-primary btn-sm" ng-click="sub_transcation_history2()">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 

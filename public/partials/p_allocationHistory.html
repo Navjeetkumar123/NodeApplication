@@ -1,0 +1,36 @@
+<div ng-controller="allocationHistoryController">
+<div class="container-fluid">
+          <div class="row" style="padding-top:35px;">
+           
+            
+            <p><b>Please find the details of all margin calls that have been issued to you:</b><p>
+                <table class="table table-bordered" style="margin-top:30px;">
+                <thead>
+                  <tr>
+                    <th>Deal ID 
+                    </th>
+                    <th>Pledgee</th>
+                    <th>RQV</th>
+                    <th>Currency</th>
+                    <th>Issue Date</th>
+                    <th>Deal Status</th>
+                    <th>Allocation Status</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                      <tr ng-repeat="y in alloc_hist_table track by $index">
+                        <td>{{y.dealId}}</td>
+                        <td>{{y.pledgee}}</td>
+                        <td>{{y.rqv}}</td>
+                        <td>{{y.currency}}</td>
+                        <td>{{y.issueDate}}</td>
+                        <td>{{y.dealStatus}}</td>
+                        <td><a href="" ng-click="submitAllocationHistory2()">{{y.allocationStatus}}</a></td>
+                      </tr>
+                    </tbody>
+            </table>
+           
+            </div>
+             
+    </div>
+  </div>

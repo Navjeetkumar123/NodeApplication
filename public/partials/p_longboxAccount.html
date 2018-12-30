@@ -1,0 +1,77 @@
+<div ng-controller="myLongboxAccController">
+<div class="container-fluid">
+
+        <div class="row" style="margin-top:25px;">
+            
+        	<table class="table table-striped table-hover">
+                    <thead>
+                     
+                      <tr>
+                        <th style="vertical-align:middle">Name:
+                        </th>
+                        <td style="vertical-align: middle">{{longBoxRecord.accountName}}</td>
+                      </tr>
+                       <tr>
+                        <th style="vertical-align:middle">Account Number
+                        </th>
+                        <td style="vertical-align: middle">{{longBoxRecord.accountNumber}}</td>
+                      </tr>
+                      <tr>
+                        <th style="vertical-align:middle">Account Type
+                        </th>
+                        <td style="vertical-align: middle">{{longBoxRecord.accountType}}</td>
+                        </tr>
+                      <tr>
+                        <th style="vertical-align:middle">Account Balance
+                        </th>
+                       <td style="vertical-align: middle">{{longBoxRecord.totalValue}}
+                          </td>
+                      </tr>
+                       <tr>
+                        <th style="vertical-align:middle">Base Currency 
+                        </th>
+                       <td style="vertical-align: middle">{{longBoxRecord.currency}}
+                          </td>
+                      </tr>
+                     </thead>
+                  </table>
+              <p><b>Allocation details are given below:</b></p>
+            <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Security</th>
+                    <th>Security ID</th>
+                    <th>Type</th>
+                    <th>Quantity</th>
+                    <th>Colleteral Form</th>
+                    <th>MTM</th>
+                    <th>Valuation %</th>
+                    <th>Effective Value</th>
+                    <th>Total Value</th>
+                    <th>Currency</th>
+                  </tr>
+                    </thead>
+                    <tbody>
+                      <tr ng-repeat='security in securities track by $index'>
+                        <td>{{security.securityName}}</td>
+                      <td>{{security.securityId}}</td>
+                        <td>{{security.securityType}}</td>
+                        <td>{{security.securityQuantity}}</td>
+                        <td>{{security.collateralForm}}</td>
+                        <td>{{security.mtm}}</td>
+                        
+                        <td>{{security.valuePercentage}}</td>
+                       
+                        <td>{{security.effectiveValue}}</td>
+                        <td>{{security.totalvalue}}</td>
+                        <td>{{security.currency}}</td>
+                      </tr>
+                    </tbody>
+            </table>
+         
+        <button type="button" ng-click="uploadFile()" class="btn btn-primary btn-sm">Add Security</button> 
+        </div>
+    </div>
+  </div>
+
+

@@ -1,0 +1,77 @@
+<div ng-controller="mySegAccController2">
+    <div class="container-fluid">
+        <div class="row" style="margin-top:15px;">
+            
+
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th style="vertical-align:middle">Account Number
+                            </th>
+                            <td style="vertical-align: middle">{{segAccount2_table2.accountNumber}}</td>
+                        </tr>
+                        <tr>
+                            <th style="vertical-align:middle">Account Type
+                            </th>
+                            <td style="vertical-align: middle">{{segAccount2_table2.accountType}}</td>
+                        </tr>
+                        <tr>
+                            <th style="vertical-align:middle">Account Balance
+                            </th>
+                            <td style="vertical-align: middle">{{segAccount2_table2.totalValue}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="vertical-align:middle">Base Currency
+                            </th>
+                            <td style="vertical-align: middle">{{segAccount2_table2.currency}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="vertical-align:middle">Pledger Name:
+                            </th>
+                            <td style="vertical-align: middle">{{segAccount2_table2.pledger}}</td>
+                        </tr>
+                    </thead>
+                </table>
+           
+        </div>
+        <div class="row" style="margin-top:15px;">
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Security</th>
+                        <th>Sec ID</th>
+                        <th>Type</th>
+                        <th>Quantity</th>
+                        <th>Colleteral Form</th>
+                        <th>MTM</th>
+                        <th>Valuation %</th>
+                        <th>Eff. Value</th>
+                        <th>Total Value</th>
+                        <th>Currency</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="security in securities track by $index">
+                        <td>{{security.securityName}}</td>
+                        <td>{{security.securityId}}</td>
+                        <td>{{security.securtyType}}</td>
+                        <td>{{security.securityQuantity}}</td>
+                        <td>{{security.collateralForm}}</td>
+                        <td>{{security.mtm}}</td>
+
+                        <td>{{security.valuePercentage}}</td>
+
+                        <td>{{security.effectiveValue}}</td>
+                        <td>{{security.totalvalue}}</td>
+                        <td>{{segAccount2_table2.currency}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

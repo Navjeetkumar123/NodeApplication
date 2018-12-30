@@ -1,0 +1,47 @@
+module.exports = function(app) {
+    var multipart = require('connect-multiparty');
+    var multipartMiddleware = multipart();
+    //var fs = require('fs');
+    //var path = require('path');
+
+    var authenticate = function(req, res, next) {
+        var isAuthenticated = true;
+        if (typeof req.session.username == 'undefined') {
+            isAuthenticated = false;
+        }
+
+        if (isAuthenticated) {
+            next();
+        } else {
+            // redirect user to authentication page
+            console.log("Authentication Failed, Sending to login");
+            res.redirect('/login');
+        }
+    }
+
+    app.all("/login",function(req, res, next) {
+        res.render('login');
+    })
+    app.all("/",authenticate,function(req, res, next) {
+		if(req.session.username!="webadmin@wipro.com")
+		{
+			 res.render('index');
+		}
+		else{
+			res.render('admin');
+		}
+    });
+	app.all("/forgotpass",function(req, res, next) {
+        res.render('forgotpass');
+
+    });
+	app.all("/registration",function(req, res, next) {
+        res.render('registration');
+
+    });
+	/*app.all("/yo",authenticate, function(req, res, next) {
+        res.render('indexBac');
+
+    });*/    
+
+};

@@ -1,0 +1,40 @@
+<div ng-controller="homeController">
+<div class="container-fluid">
+       <div class="row" style="margin-top:30px;">
+            
+            <p><b>Please find the margin calls issued to you that are not allocated because of insufficient collateral in your account:<b>                 
+            <p>
+                <table class="table table-bordered" style="margin-top:30px;">
+                <thead>
+                  <tr>
+                    <th>Transaction No. 
+                    </th>
+                    <th>Deal ID 
+                    </th>
+                    <th>Pledgee</th>
+                    <th>RQV</th>
+                    <th>Currency</th>
+                    <th>Margin Call Date</th>
+                    <th>Deal Status</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                      <tr ng-repeat="marginCall in pendingMarginCalls track by $index">
+                        <td>{{marginCall.transactionId}}</td>
+                        <td>{{marginCall.dealId}}</td>
+                        <td>{{marginCall.pledgee}}</td>
+                        <td>{{marginCall.rqv}}</td>
+                        <td>{{marginCall.currency}}</td>
+                        <td>{{marginCall.marginCAllDate}}</td>
+                        <td>{{marginCall.transactionStatus}}</td>
+                      </tr>
+                    </tbody>
+            </table>
+         
+          
+            </div>
+             
+    </div>
+  </div>
+
+

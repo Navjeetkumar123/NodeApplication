@@ -1,0 +1,85 @@
+<div ng-controller="viewAccDetailsController">
+<div class="container-fluid">
+
+    <div class="row" style="margin-top:30px;">
+          
+            
+            <table class="table table-striped table-hover">
+                    <thead>
+                     
+                       <tr>
+                        <th style="vertical-align:middle">Account Holder Name:
+                        </th>
+                        <td style="vertical-align: middle">{{viewAcc_holder_details.accountHolderName}}</td>
+                      </tr>
+                       <tr>
+                        <th style="vertical-align:middle">Accont Number
+                        </th>
+                        <td style="vertical-align: middle">{{viewAcc_holder_details.accountNumber}}</td>
+                      </tr>
+                      <tr>
+                        <th style="vertical-align:middle">Accont Type
+                        </th>
+                        <td style="vertical-align: middle">{{viewAcc_holder_details.accountType}}</td>
+                      </tr>
+                      <tr>
+                        <th style="vertical-align:middle">Accont Balance
+                        </th>
+                        <td style="vertical-align: middle">{{viewAcc_holder_details.accountBalnace}}</td>
+                      </tr>
+                      <tr>
+                        <th style="vertical-align:middle">Base Currency
+                        </th>
+                        <td style="vertical-align: middle">{{viewAcc_holder_details.currency}}</td>
+                        </tr>
+                        <tr>
+                        <th style="vertical-align:middle">Pladger Name
+                        </th>
+                        <td style="vertical-align: middle">{{viewAcc_holder_details.pledgerName}}</td>
+                      </tr>
+                      </thead>
+                  </table>
+                    
+            </div>
+            <div class="row"  style="margin-top:30px;">
+                <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Security</th>
+                    <th>Sec ID</th>
+                    <th>Type</th>
+                    <th>Quantity</th>
+                    <th>Colleteral Form</th>
+                    <th>MTM</th>
+                    <th>Margin Call Date</th>
+                    <th>Valuation %</th>
+                    <th>Eff. Value</th>
+                    <th>Total Value</th>
+                    <th>Currency</th>
+                   
+                      </tr>
+                    </thead>
+                    <tbody>
+                       <tr ng-repeat="x in transaction_history_TableData_3 track by $index">
+                        <td data-tile="Security">{{x.security}}</td>
+                      <td data-tile="Sec ID">{{x.secId}}</td>
+                        <td data-tile="Type">{{x.type}}</td>
+                        <td data-tile="Quantity">{{x.quantity}}</td>
+                        <td data-tile="Colleteral Form">{{x.collForm}}</td>
+                        <td data-tile="MTM">{{x.mtm}}</td>
+                        <td data-tile="mrginCallDate">{{x.mrginCallDate}}</td>
+                        <td data-tile="Valuation %">{{x.valuation}}</td>
+                       
+                        <td data-tile="Eff. Value">{{x.effValue}}</td>
+                        <td data-tile="Total Value">{{x.totalValue}}</td>
+                        <td data-tile="Currency">{{x.currency}}</td>
+                      </tr>
+                    </tbody>
+            </table>
+          
+            </div>
+             
+    </div>
+  </div>
+
+

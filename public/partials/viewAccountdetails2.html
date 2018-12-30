@@ -1,0 +1,79 @@
+<div ng-controller="viewAccDetailsController">
+<div class="container-fluid">
+ 
+        <div class="row" style="margin-top:30px;">
+         
+            
+            <table class="table table-striped table-hover">
+                    <thead>
+                     
+                      <tr>
+                        <th style="vertical-align:middle">Account Holder Name:
+                        </th>
+                        <td style="vertical-align: middle">{{viewAcc_holder_details.accountName}}</td>
+                      </tr>
+                       <tr>
+                        <th style="vertical-align:middle">Account Number
+                        </th>
+                        <td style="vertical-align: middle">{{viewAcc_holder_details.accountNumber}}</td>
+                      </tr>
+                      <tr>
+                        <th style="vertical-align:middle">Accont Type
+                        </th>
+                        <td style="vertical-align: middle">{{viewAcc_holder_details.accountType}}</td>
+                      </tr>
+                      <tr>
+                        <th style="vertical-align:middle">Accont Balance
+                        </th>
+                        <td style="vertical-align: middle">{{viewAcc_holder_details.totalValue}}</td>
+                      </tr>
+                      <tr>
+                        <th style="vertical-align:middle">Base Currency
+                        </th>
+                        <td style="vertical-align: middle">{{viewAcc_holder_details.currency}}</td>
+                        </tr>
+                       
+                      </thead>
+                  </table>
+               
+            </div>
+            <div class="row"  style="margin-top:30px;">
+                <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Security</th>
+                    <th>Sec ID</th>
+                    <th>Type</th>
+                    <th>Quantity</th>
+                    <th>Colleteral Form</th>
+                    <th>MTM</th>
+                    <th>Margin Call Date</th>
+                    <th>Valuation %</th>
+                    <th>Eff. Value</th>
+                    <th>Total Value</th>
+                    <th>Currency</th>
+                   
+                      </tr>
+                    </thead>
+                    <tbody>
+                     <tr ng-repeat="security in securityData track by $index">
+                        <td data-tile="Security">{{security.security}}</td>
+                      <td data-tile="Sec ID">{{security.secId}}</td>
+                        <td data-tile="Type">{{security.type}}</td>
+                        <td data-tile="Quantity">{{security.quantity}}</td>
+                        <td data-tile="Colleteral Form">{{security.collForm}}</td>
+                        <td data-tile="MTM">{{security.mtm}}</td>
+                        <td data-tile="mrginCallDate">{{security.mrginCallDate}}</td>
+                        <td data-tile="Valuation %">{{security.valuation}}</td>
+                       
+                        <td data-tile="Eff. Value">{{security.effValue}}</td>
+                        <td data-tile="Total Value">{{security.totalValue}}</td>
+                        <td data-tile="Currency">{{security.currency}}</td>
+                      </tr>
+                    </tbody>
+            </table>
+          
+            </div>
+             
+    </div>
+  </div>
